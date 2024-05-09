@@ -12,7 +12,13 @@ return {
   -- NOTE: And you can specify dependencies as well
   dependencies = {
     -- Creates a beautiful debugger UI
-    'rcarriga/nvim-dap-ui',
+    {
+      'rcarriga/nvim-dap-ui',
+      dependencies = {
+        'mfussenegger/nvim-dap',
+        'nvim-neotest/nvim-nio',
+      },
+    },
 
     -- Required dependency for nvim-dap-ui
     'nvim-neotest/nvim-nio',
