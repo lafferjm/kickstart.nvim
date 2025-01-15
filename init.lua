@@ -834,7 +834,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   -- require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
@@ -855,37 +855,37 @@ require('lazy').setup({
     opts = {},
   },
 
-  {
-    'nvim-tree/nvim-tree.lua',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-    },
-    config = function()
-      local function my_on_attach(bufnr)
-        local api = require 'nvim-tree.api'
-
-        api.config.mappings.default_on_attach(bufnr)
-
-        vim.keymap.set('n', '<leader>fo', api.tree.open, { desc = '[F]ile tree [O]pen' })
-        vim.keymap.set('n', '<leader>ft', api.tree.toggle, { desc = '[F]ile tree [T]oggle' })
-
-        vim.keymap.set('n', '<leader>oh', api.node.open.horizontal, { desc = '[O]pen file [H]orizontal split' })
-        vim.keymap.set('n', '<leader>ov', api.node.open.vertical, { desc = '[O]pen file [V]ertical split' })
-      end
-
-      require('nvim-tree').setup {
-        on_attach = my_on_attach,
-        filters = {
-          dotfiles = false,
-          git_ignored = false,
-          custom = { '^.git$' },
-        },
-        git = {
-          enable = true,
-        },
-      }
-    end,
-  },
+  -- {
+  --   'nvim-tree/nvim-tree.lua',
+  --   dependencies = {
+  --     'nvim-tree/nvim-web-devicons',
+  --   },
+  --   config = function()
+  --     local function my_on_attach(bufnr)
+  --       local api = require 'nvim-tree.api'
+  --
+  --       api.config.mappings.default_on_attach(bufnr)
+  --
+  --       vim.keymap.set('n', '<leader>fo', api.tree.open, { desc = '[F]ile tree [O]pen' })
+  --       vim.keymap.set('n', '<leader>ft', api.tree.toggle, { desc = '[F]ile tree [T]oggle' })
+  --
+  --       vim.keymap.set('n', '<leader>oh', api.node.open.horizontal, { desc = '[O]pen file [H]orizontal split' })
+  --       vim.keymap.set('n', '<leader>ov', api.node.open.vertical, { desc = '[O]pen file [V]ertical split' })
+  --     end
+  --
+  --     require('nvim-tree').setup {
+  --       on_attach = my_on_attach,
+  --       filters = {
+  --         dotfiles = false,
+  --         git_ignored = false,
+  --         custom = { '^.git$' },
+  --       },
+  --       git = {
+  --         enable = true,
+  --       },
+  --     }
+  --   end,
+  -- },
 
   {
     'jinh0/eyeliner.nvim',
