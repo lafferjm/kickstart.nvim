@@ -839,16 +839,16 @@ require('lazy').setup({
   -- require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
 
-  {
-    'NeogitOrg/neogit',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'sindrets/diffview.nvim',
-      'nvim-telescope/telescope.nvim',
-      'ibhagwan/fzf-lua',
-    },
-    config = true,
-  },
+  -- {
+  --   'NeogitOrg/neogit',
+  --   dependencies = {
+  --     'nvim-lua/plenary.nvim',
+  --     'sindrets/diffview.nvim',
+  --     'nvim-telescope/telescope.nvim',
+  --     'ibhagwan/fzf-lua',
+  --   },
+  --   config = true,
+  -- },
 
   {
     'stevearc/dressing.nvim',
