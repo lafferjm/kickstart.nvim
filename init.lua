@@ -1,5 +1,5 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -10,7 +10,7 @@ vim.opt.relativenumber = true
 vim.opt.showmode = false
 
 vim.schedule(function()
-	vim.opt.clipboard = 'unnamedplus'
+  vim.opt.clipboard = 'unnamedplus'
 end)
 
 vim.opt.breakindent = true
@@ -58,12 +58,11 @@ vim.keymap.set('n', '<leader>wr', '<C-w>r', { desc = 'Rotate splits clockwise' }
 vim.keymap.set('n', '<leader>wR', '<C-w>R', { desc = 'Rotate splits counter clockwise' })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
-	desc = 'Highlight when yanking text',
-	group = vim.api.nvim_create_augroup('highlight-yank', { clear = true  }),
-	callback = function()
-		vim.highlight.on_yank()
-	end,
+  desc = 'Highlight when yanking text',
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
 
-require('config.lazy')
-
+require 'config.lazy'
