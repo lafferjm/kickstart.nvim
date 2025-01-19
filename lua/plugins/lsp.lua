@@ -38,6 +38,9 @@ return {
   },
   {
     'neovim/nvim-lspconfig',
+    dependencies = {
+      { 'j-hui/fidget.nvim', opts = {} },
+    },
     config = function()
       require('mason').setup()
       require('mason-lspconfig').setup {
